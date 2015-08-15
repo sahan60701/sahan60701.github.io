@@ -1,0 +1,591 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+    <link rel="stylesheet" href="Styles/Site.css" />
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="Scripts/sahanRestMain.js"></script>
+    
+
+    <title>Sahan Restaurant </title>
+</head>
+<body>
+
+    <!--Home Page-->
+    <div data-role="page" id="home">
+        <div data-role="header" data-position="fixed">
+            <h1 class="head1">
+                Sahan Restaurant
+            </h1>
+
+            <h2>
+                WELCOME
+            </h2>
+        </div>
+
+        <div data-role="content">
+            <div align="right">
+                <a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a"
+                   data-transition="slidedown">Sign in</a>
+                <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+                    <form>
+                        <div style="padding: 10px 20px;">
+                            <h3>
+                                Sign in
+                            </h3>
+                            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-right ui-icon-check">
+                                Sign in
+                            </button>
+                            <label for="un" class="ui-hidden-accessible">
+                                Username:
+                            </label>
+                            <input type="text" name="user" id="un" value="" placeholder="username" data-theme="a">
+                            <label for="pw" class="ui-hidden-accessible">
+                                Password:
+                            </label>
+                            <input type="password" name="pass" id="pw" value="" placeholder="password" data-theme="a">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <ul data-role="listview" data-inset="true">
+
+                <li data-icon="grid">
+                    <a href="#menu">Menu</a>
+                </li>
+                <li>
+                    <a href="#feedback">Feedback</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#developer">Developer</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h5 class="head5">
+                Copyright: Sahan Madusanka
+            </h5>
+        </div>
+    </div>
+    <!-------------------------------------------------------------->
+    <!--Manu Page-->
+    <div data-role="page" id="menu">
+        <div data-role="header" data-position="fixed">
+            <h1 class="head1">
+                Menu
+            </h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="navbar">
+                <ul>
+                    <li data-icon="home">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#feedback">Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#developer">Developer</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ui-grid-b" style="padding: 5px;">
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a"><div class="ui-bar-a" style="height: 25px; padding: 5px;">BURGERS</div></div>
+                </div>
+                <div class="ui-block-a">
+                    <div class="ui-bar-a" style="height: 290px; padding: 5px;">
+                        <h3>
+                            <u>Ham Burger</u>
+                        </h3>
+
+                        <img src="Content/Ham_Burger.jpg" alt="Ham Burger" class="images">
+
+                        <p>A juicy 100% beef patty simply seasoned with a pinch of salt and pepper, tangy pickles, minced onions, ketchup and mustard</p>
+
+                        <a href="#popupHam" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">
+                            Ingredients
+                        </a>
+                        <div data-role="popup" id="popupHam" class="ui-content">
+                            <p>
+                                <h3>
+                                    Ingredients
+                                </h3>
+                                <hr>
+                                <ul class="quicklist">
+                                    <li>Cheese</li>
+                                    <li>Pickles</li>
+                                    <li>Beef Paddy</li>
+                                    <li>Mustard</li>
+                                </ul>
+                                100% Beef
+                            </p>
+                        </div>
+                        <a href="#three" data-role="button"
+                           data-inline="true">order</a>
+
+                    </div>
+                </div>
+
+                <div class="ui-block-b">
+                    <div class="ui-bar-a" style="height: 290px; padding: 5px;">
+                        <h3>
+                            <u>Cheese Burger</u>
+                        </h3>
+
+                        <img src="Content/Cheese_Burger.jpg" alt="Cheese Burger" class="images">
+
+                        <p>A juicy 100% beef patty simply seasoned with a pinch of salt and pepper, melty American cheese, tangy pickles, minced onions, ketchup and mustard.</p>
+
+                        <a href="#popupCheese" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">
+                            Ingredients
+                        </a>
+                        <div data-role="popup" id="popupCheese" class="ui-content">
+                            <p>
+                                <h3>
+                                    Ingredients
+                                </h3>
+                                <hr>
+                                <ul class="quicklist">
+                                    <li>Amarican Cheese</li>
+                                    <li>Beef</li>
+                                    <li>Garlic</li>
+                                </ul>
+                                100% Beef
+                            </p>
+                        </div>
+                        <a href="#three" data-role="button"
+                           data-inline="true">order</a>
+
+                    </div>
+                </div>
+                <div class="ui-block-c">
+                    <div class="ui-bar-a" style="height: 290px; padding: 5px;">
+                        <h3>
+                            <u>BBQ Burger</u>
+                        </h3>
+
+                        <img src="Content/BBQ_Burger.jpg" alt="BBQ Burger" class="images">
+
+                        <p>A patty of your choice seasoned with a pinch of salt and pepper, then topped with melted white cheddar*, zesty barbecue ranch sauce and crispy tortilla strips, all on a classic bun.</p>
+
+                        <a href="#popupBBQ" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">
+                            Ingredients
+                        </a>
+                        <div data-role="popup" id="popupBBQ" class="ui-content">
+                            <p>
+                                <h3>
+                                    Ingredients
+                                </h3>
+                                <hr>
+                                <ul class="quicklist">
+                                    <li>Cheese</li>
+                                    <li>Chicken/Beef/Sausages</li>
+                                    <li>Garlic</li>
+                                </ul>
+                                Real ausi grown chicken
+                            </p>
+                        </div>
+                        <a href="#three" data-role="button"
+                           data-inline="true">order</a>
+
+                    </div>
+                </div>
+
+
+                <!--Sanwich Row-->
+
+                <hr />
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a"><div class="ui-bar-a" style="height: 25px; padding: 5px;">SANDWICHES</div></div>
+                </div>
+                <div class="ui-block-a">
+                    <div class="ui-bar-a" style="height: 290px; padding: 5px;">
+                        <h3>
+                            <u>Ham & Cheese</u>
+                        </h3>
+
+                        <img src="Content/Ham_And_Cheese_Sandwich.jpg" alt="Ham & Cheese" class="images">
+
+                        <p>Melt with ham and tasty melted coon cheese wrapped in a warm toasted tortilla.</p>
+                        <a href="#popupHamCheese" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">
+                            Ingredients
+                        </a>
+                        <div data-role="popup" id="popupHamCheese" class="ui-content">
+                            <p>
+                                <h3>
+                                    Ingredients
+                                </h3>
+                                <hr>
+                                <ul class="quicklist">
+                                    <li>Cheese</li>
+                                    <li>Ham</li>
+                                    <li>Source</li>
+                                    <li>Salad</li>
+                                </ul>
+                                Ausi grown salad
+                            </p>
+                        </div>
+                        <a href="#three" data-role="button"
+                           data-inline="true">order</a>
+
+                    </div>
+                </div>
+
+                <div class="ui-block-b">
+                    <div class="ui-bar-a" style="height: 290px; padding: 5px;">
+                        <h3>
+                            <u>Chicken & Cheese</u>
+                        </h3>
+                        <img src="Content/Chicken_And_Cheese_Sandwich.jpg" alt="Chicken & Cheese" class="images">
+
+                        <p>A lightly battered and deep fried chicken fillet with mayo, tomato and cheese. </p>
+                        <a href="#popupChickenCheese" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">
+                            Ingredients
+                        </a>
+                        <div data-role="popup" id="popupChickenCheese" class="ui-content">
+                            <p>
+                                <h3>
+                                    Ingredients
+                                </h3>
+                                <hr>
+                                <ul class="quicklist">
+                                    <li>Cheese</li>
+                                    <li>Chicken</li>
+                                    <li>Garlic</li>
+                                </ul>
+                                aaaaaa
+                            </p>
+                        </div>
+                        <a href="#three" data-role="button"
+                           data-inline="true">order</a>
+
+                    </div>
+                </div>
+                <div class="ui-block-c">
+                    <div class="ui-bar-a" style="height: 290px; padding: 5px;">
+                        <h3>
+                            <u>Salami & Cheese</u>
+                        </h3>
+                        <img src="Content/Salami_And_Cheese_Sandwich.jpg" alt="Salami & Cheese" class="images">
+                        <p>A great delicacy for chicken salami lovers..</p>
+
+                        <a href="#popupSalami" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">
+                            Ingredients
+                        </a>
+                        <div data-role="popup" id="popupSalami" class="ui-content">
+                            <p>
+                                <h3>
+                                    Ingredients
+                                </h3>
+                                <hr>
+                                <ul class="quicklist">
+                                    <li>Cheese</li>
+                                    <li>Chicken</li>
+                                    <li>Garlic</li>
+                                </ul>
+
+                            </p>
+                        </div>
+                        <a href="#three" data-role="button"
+                           data-inline="true">order</a>
+
+                    </div>
+                </div>
+                <hr />
+
+                <!--<a href="tel:0061452602855" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a"
+                   data-transition="pop">Call Now!</a>-->
+                <a href="tel:0061452602855" data-role="button" rel="external">Call Us Now!! : 0061 424 181 412</a>
+
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h5 class="head5">
+                Copyright: Sahan Madusanka
+            </h5>
+        </div>
+    </div>
+    <!-------------------------------------------------------------->
+    <!--Order page-->
+    <div data-role="page" id="order">
+        <h1 class="head1">
+            Place Order
+        </h1>
+        <div data-grid="c">
+            <!--<ul>
+                <li><a href="#one" class="ui-btn-active">Home</a></li>
+                <li><a href="#two">Menu</a></li>
+                <li><a href="#three">order</a></li>
+                <li><a href="#four">contacts</a></li>
+            </ul>-->
+            <label for="text-basic">
+                Name:
+            </label>
+            <input type="text" name="text-basic" id="text-basic" value="">
+            <h4>
+                search your meal here:
+            </h4>
+            <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search devices..."
+                data-inset="true">
+                <li><a href="#">rice</a></li>
+                <li><a href="#">meat</a></li>
+                <li><a href="#">noodles</a></li>
+                <li><a href="#">roti</a></li>
+                <li><a href="#">ice cream</a></li>
+                <li><a href="#">masala</a></li>
+            </ul>
+            <form>
+                <h4>
+                    choose your payment method
+                </h4>
+                <fieldset data-role="collapsible">
+                    <legend>payment method </legend>
+                    <div data-role="controlgroup">
+                        <input type="checkbox" name="checkbox-1-a" id="checkbox-1-a">
+                        <label for="checkbox-1-a">
+                            Master card
+                        </label>
+                        <input type="checkbox" name="checkbox-2-a" id="checkbox-2-a">
+                        <label for="checkbox-2-a">
+                            paypal
+                        </label>
+                        <input type="checkbox" name="checkbox-3-a" id="checkbox-3-a">
+                        <label for="checkbox-3-a">
+                            Transfer
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
+            <form>
+                <input type="button" data-role="none" value="Order">
+                <input type="submit" data-role="none" value="clear">
+                <input type="reset" data-role="none" value="Cancel">
+            </form>
+        </div>
+        <h5 class="head5">
+            Copyright: Sahan Madusanka
+        </h5>
+    </div>
+    <!-------------------------------------------------------------->
+    <!--Feedback page-->
+    <div data-role="page" id="feedback">
+        <div data-role="header" data-position="fixed">
+            <h1 class="head1">
+                Feedback
+            </h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="navbar">
+                <ul>
+                    <li data-icon="home">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#menu">Menu</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#developer">Developer</a>
+                    </li>
+                </ul>
+            </div>
+
+            <h5>
+                We love to know your feedback!
+            </h5>
+            <!--<label for="textinput-4" class="ui-hidden-accessible">Frst name</label>
+            <h5>
+                Frst name
+            </h5>
+            <input type="text" name="textinput-4" id="textinput-4" placeholder="Text input" value="">-->
+            <form>
+                <label for="basic">Your Name:</label>
+                <input type="text" name="yourName" id="txtName" value="" />
+
+                <label for="basic">Email:</label>
+                <input type="text" name="email" id="txtEmail" value="" />
+
+
+                <!--<label for="textinput-4" class="ui-hidden-accessible">
+                    Lst name
+                </label>
+                <h5>
+                    Fmily name
+                </h5>-->
+                <!--<input type="text" name="textinput-4" id="textinput-4" placeholder="Text input" value="">
+                <label for="textinput-4" class="ui-hidden-accessible">
+                    Email address
+                </label>
+                <h5>
+                    Emial address
+                </h5>
+                <input type="text" name="textinput-4" id="textinput-4" placeholder="Text input" value="">-->
+                <label for="textarea-a">Comments:</label>
+                <textarea name="textarea" id="textarea-a">
+                    Give your suggestions, complaints, comments or anything to make things better for you the next time!! Thanks....
+                </textarea>
+
+                <!--<h4>
+                    Comments
+                </h4>
+                <label for="textarea-8" class="ui-hidden-accessible">
+                    complains:
+                </label>
+                <textarea cols="40" rows="8" name="textarea-8" id="textarea-8" data-mini="true">Textarea</textarea>
+                <form>
+                    <label for="datetime-4">
+                        date of birth
+                    </label>
+                    <input type="datetime-local" data-clear-btn="true" name="datetime-4" id="datetime-4"
+                           value="">
+                </form>-->
+
+                <label for="datetime-4">
+                    When were you at our place?
+                </label>
+                <input type="datetime-local" data-clear-btn="true" name="datetime-4" id="datetime-4" value="">
+
+                <label for="file-1">
+                    Upload pictures, documents or anything you want to show us!!
+                </label>
+                <input type="file" data-clear-btn="false" name="file-1" id="file-1" value="">
+
+
+
+                <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini" style="width:150px;align-content:center;">
+                    Submit
+                </button>
+
+            </form>
+
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h5 class="head5">
+                Copyright: Sahan Madusanka
+            </h5>
+        </div>
+    </div>
+    <!-------------------------------------------------------------->
+    <!--Contact Us page-->
+    <div data-role="page" id="contact" data-url="contact">
+        <div data-role="header" data-position="fixed">
+            <h1 class="head1">
+                Conatct Us
+            </h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="navbar">
+                <ul>
+                    <li data-icon="home">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#menu">Menu</a>
+                    </li>
+                    <li>
+                        <a href="#feedback">Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#developer">Developer</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="border-a">
+                
+                <a href="tel:0061452602855" data-role="button" rel="external">Call Us Now!! : 0061 424 181 412</a>
+
+                <a href="mailto:sahan@yahoo.com" data-role="button" rel="external">Email Us Now!! : sahan@yahoo.com</a>
+
+                <a href="#" data-role="button" rel="external">Our Location : 2A Closer Avenue, Ashwood, VIC 3147</a>
+
+            </div>
+
+
+            
+
+
+        </div>
+
+        <div role="main" class="ui-content" id="map-canvas" style="width: 570px; height: 400px; margin: 0 auto; padding-bottom:20px;">
+            <!-- map loads here... -->
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h5 class="head5">
+                copyright: sahan
+            </h5>
+        </div>
+    </div>
+    <!-------------------------------------------------------------->
+    <!--Developer page-->
+    <div data-role="page" id="developer">
+        <div data-role="header" data-position="fixed">
+            <h1 class="head1">
+                Developer
+            </h1>
+        </div>
+
+        <div data-role="content">
+            <div data-role="navbar">
+                <ul>
+                    <li data-icon="home">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#menu">Menu</a>
+                    </li>
+                    <li>
+                        <a href="#feedback">Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ui-grid-b" style="padding: 5px; ">
+                <div class="ui-grid-solo" style="width: 330px; margin: 0 auto;">
+                    <div class="ui-block-a"><div class="ui-bar-a" style="height: 25px; padding: 5px;">Sahan Madusanka</div></div>
+
+                    <img src="Content/sahan.jpg" alt="Sahan Madusanka" style="height:300px;width:330px;">
+
+                    <a href="https://www.facebook.com/sahan60701" data-role="button" rel="external"><p>I love mobile app development..... and yes Kangaroos too</p></a>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h5 class="head5">
+                Copyright: Sahan Madusanka
+            </h5>
+        </div>
+    </div>
+    <!-------------------------------------------------------------->
+
+
+</body>
+</html>
